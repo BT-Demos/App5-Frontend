@@ -20,9 +20,9 @@ jobs:
         uses: cloudbees-gha-cbp/register-build-artifact@main
         id: go-action
         with:
-          name: "App4-Frontend"
-          version: 4.0.0
-          url: docker.io/App4/App4-Frontend:4.0.0
+          name: "App5-Frontend"
+          version: 1.0.0
+          url: docker.io/App5/App5-Frontend:1.0.0
           type: "docker"
           cloudbees-url: "https://api.saas-preprod.beescloud.com"
           cloudbees-pat: ${{ secrets.CBP_PAT }}
@@ -81,7 +81,7 @@ jobs:
           cloudbees-url: "https://api.saas-preprod.beescloud.com/"
           cloudbees-pat: ${{ secrets.CBP_PAT }}
           workflow-file-name: "cbp-deploy.yaml"
-          workflow-inputs: '{"artifactName": "App4-Frontend","artifactVersion": "4.0.0", "environment": "qa"}'
+          workflow-inputs: '{"artifactName": "App5-Frontend","artifactVersion": "1.0.0", "environment": "qa"}'
 
       - name: Use runUrl output
         run: echo "The CloudBees run URL is ${{ steps.deploy.outputs.cbp_run_url}}"
